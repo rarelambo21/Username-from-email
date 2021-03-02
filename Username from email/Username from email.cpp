@@ -6,7 +6,25 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::string str, name = "";
+
+    std::cout << "Enter a fill email\n";
+    std::cin >> str;
+
+    int len = (int)str.length();
+
+    name.resize(len);
+
+    for (int i = 0; i < len; i++) {
+        if (str[i] == '@')
+            break;
+        else
+            name[i] = str[i];
+    }
+
+    std::cout << "Username from email is: " << name << std::endl;
+
+    return 0;
 }
 
 
